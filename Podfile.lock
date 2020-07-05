@@ -1,0 +1,18 @@
+PODS:
+  - Navigator (0.1.1)
+  - Navigator/Tests (0.1.1)
+
+DEPENDENCIES:
+  - Navigator (from `Navigator.podspec`)
+  - Navigator/Tests (from `Navigator.podspec`)
+
+EXTERNAL SOURCES:
+  Navigator:
+    :path: Navigator.podspec
+
+SPEC CHECKSUMS:
+  Navigator: 6ee3c95b233bea98312796a3c9fb97ce59f47221
+
+PODFILE CHECKSUM: fdf30713c1ec368c55a747368f04fd6572b6f93c
+
+COCOAPODS: 1.9.3
