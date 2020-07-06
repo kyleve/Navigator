@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Navigator
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
