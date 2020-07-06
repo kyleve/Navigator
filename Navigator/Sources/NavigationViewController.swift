@@ -77,7 +77,7 @@ public final class NavigationViewController : UIViewController {
 }
 
 
-public struct NavigationConfig
+public struct NavigationItem
 {
     public var header : Header
     
@@ -86,36 +86,44 @@ public struct NavigationConfig
         
         public var backItem : BackItem?
         
+        public var title : Title
+        
         public var left : [ButtonItem]
         public var right : [ButtonItem]
     }
-}
+    
+    public struct Title {
+        var icon : UIImage?
+        var text : String
+    }
+    
+    public struct BackItem {
+        public var onTap : (() -> ())?
+        public var isVisible : Bool
+    }
 
-public struct BackItem {
-    public var onTap : (() -> ())?
-    public var isVisible : Bool
-}
-
-public struct ButtonItem {
-    
-    var icon : UIImage?
-    var title : String?
-    
-    var onTap : () -> ()
-    
-    var style : Style
-    
-    enum Style {
-        case primary
-        case secondary
-        case tertiary
+    public struct ButtonItem {
+        
+        var icon : UIImage?
+        var title : String?
+        
+        var onTap : () -> ()
+        
+        var style : Style
+        
+        enum Style {
+            case primary
+            case secondary
+            case tertiary
+        }
     }
 }
+
 
 
 public protocol NavigationContentViewController : UIViewController
 {
-    var navConfig : NavigationConfig { get }
+    
 }
 
 
