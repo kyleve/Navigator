@@ -20,7 +20,8 @@ final class NavigationView : UIView {
         
     }
     
-    @objc private func edgePanStateChanged() {
+    @objc private func edgePanStateChanged()
+    {
         
     }
 }
@@ -59,6 +60,11 @@ extension NavigationView {
                 var animator : UIViewPropertyAnimator
                 var from : ViewControllerState
                 var to : ViewControllerState
+            }
+            
+            mutating func perform(_ action : Action)
+            {
+                
             }
         }
     }
